@@ -1,5 +1,8 @@
 nav:
   - About: index.md
+  - Core Knowledge & Theory:
+      - Security and Risk Management:
+          - The CIA Triad and DAD Triad: core-knowledge-and-theory/security-and-risk-management/the-cia-triad-and-dad-triad.md
 remote_branch: docs
 site_name: Harckives
 theme:
