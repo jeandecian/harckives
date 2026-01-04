@@ -7,6 +7,8 @@ nav:
           - Data Classification: core-knowledge-and-theory/asset-security/data-classification.md
       - Security Architecture and Engineering:
           - Cryptography: core-knowledge-and-theory/security-architecture-and-engineering/cryptography.md
+      - Communication and Network Security:
+          - OSI and TCP/IP Models: core-knowledge-and-theory/communication-and-network-security/osi-and-tcp-ip-models.md
 remote_branch: docs
 site_name: Harckives
 theme:
