@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>OSI and TCP/IP Models - Harckives</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "OSI and TCP/IP Models";
+        var mkdocs_page_input_path = "core-knowledge-and-theory/communication-and-network-security/osi-and-tcp-ip-models.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> Harckives
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">About</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Core Knowledge & Theory</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" >Security and Risk Management</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../security-and-risk-management/the-cia-triad-and-dad-triad/">The CIA Triad and DAD Triad</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Asset Security</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../asset-security/data-classification/">Data Classification</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Security Architecture and Engineering</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../security-architecture-and-engineering/cryptography/">Cryptography</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >Communication and Network Security</a>
+    <ul class="current">
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">OSI and TCP/IP Models</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#why-these-models-matter">Why These Models Matter</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#osi-model-7-layers">OSI Model: 7 Layers</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#tcpip-model-4-layers">TCP/IP Model: 4 Layers</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#mapping-osi-to-tcpip">Mapping OSI to TCP/IP</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">Harckives</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Core Knowledge & Theory</li>
+          <li class="breadcrumb-item">Communication and Network Security</li>
+      <li class="breadcrumb-item active">OSI and TCP/IP Models</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="osi-and-tcpip-models">OSI and TCP/IP Models</h1>
+<h2 id="why-these-models-matter">Why These Models Matter</h2>
+<p>The <strong>OSI (Open Systems Interconnection)</strong> and <strong>TCP/IP</strong> models are foundational frameworks for understanding how networks communicate. They help cybersecurity professionals design, troubleshoot, and secure networks by defining how data is transmitted, routed, and received across systems.</p>
+<h2 id="osi-model-7-layers">OSI Model: 7 Layers</h2>
+<p>The OSI model is a <strong>conceptual framework</strong> that standardizes network functions into seven layers. Each layer has a specific role and interacts with the layers directly above and below it.</p>
+<table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>Name</th>
+<th>Function</th>
+<th>Security Considerations</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Layer 7</td>
+<td>Application</td>
+<td>Provides network services to end-user applications (e.g., HTTP, FTP, SMTP).</td>
+<td>Vulnerabilities in protocols (e.g., SQL injection, XSS).</td>
+</tr>
+<tr>
+<td>Layer 6</td>
+<td>Presentation</td>
+<td>Translates data between the application layer and the network (e.g., encryption, compression).</td>
+<td>Data integrity, encryption (e.g., TLS/SSL).</td>
+</tr>
+<tr>
+<td>Layer 5</td>
+<td>Session</td>
+<td>Manages sessions/connections between applications (e.g., NetBIOS, RPC).</td>
+<td>Session hijacking, man-in-the-middle (MITM) attacks.</td>
+</tr>
+<tr>
+<td>Layer 4</td>
+<td>Transport</td>
+<td>Ensures end-to-end communication and data integrity (e.g., TCP, UDP).</td>
+<td>Port scanning, SYN floods, packet sniffing.</td>
+</tr>
+<tr>
+<td>Layer 3</td>
+<td>Network</td>
+<td>Handles routing and forwarding of data packets (e.g., IP, ICMP, routers).</td>
+<td>IP spoofing, routing attacks, DDoS.</td>
+</tr>
+<tr>
+<td>Layer 2</td>
+<td>Data Link</td>
+<td>Manages data framing and physical addressing (e.g., MAC addresses, switches, Ethernet).</td>
+<td>MAC flooding, ARP spoofing, VLAN hopping.</td>
+</tr>
+<tr>
+<td>Layer 1</td>
+<td>Physical</td>
+<td>Transmits raw bit streams over physical media (e.g., cables, hubs, repeaters).</td>
+<td>Physical tampering, eavesdropping, cable tapping.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="tcpip-model-4-layers">TCP/IP Model: 4 Layers</h2>
+<p>The <strong>TCP/IP model</strong> is the practical implementation of the OSI model, used in modern networks (e.g., the Internet). It consolidates the OSI layers into four layers.</p>
+<table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>Name</th>
+<th>Function</th>
+<th>Security Considerations</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Layer 4</td>
+<td>Application</td>
+<td>Combines OSI Layers 5-7. Handles high-level protocols (e.g., HTTP, DNS, SSH).</td>
+<td>Application-layer attacks (e.g., DDoS, malware).</td>
+</tr>
+<tr>
+<td>Layer 3</td>
+<td>Transport</td>
+<td>Combines OSI Layer 4. Ensures data delivery (e.g., TCP, UDP).</td>
+<td>Port scanning, SYN attacks, packet injection.</td>
+</tr>
+<tr>
+<td>Layer 2</td>
+<td>Internet</td>
+<td>Combines OSI Layer 3. Handles addressing and routing (e.g., IP, ICMP).</td>
+<td>IP spoofing, routing attacks, fragmentation attacks.</td>
+</tr>
+<tr>
+<td>Layer 1</td>
+<td>Network Access</td>
+<td>Combines OSI Layers 1-2. Manages physical and data link functions (e.g., Ethernet, Wi-Fi).</td>
+<td>MAC spoofing, ARP poisoning, physical attacks.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="mapping-osi-to-tcpip">Mapping OSI to TCP/IP</h2>
+<table>
+<thead>
+<tr>
+<th>OSI Layer</th>
+<th>TCP/IP Layer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Application</td>
+<td>Application</td>
+</tr>
+<tr>
+<td>Presentation</td>
+<td>Application</td>
+</tr>
+<tr>
+<td>Session</td>
+<td>Application</td>
+</tr>
+<tr>
+<td>Transport</td>
+<td>Transport</td>
+</tr>
+<tr>
+<td>Network</td>
+<td>Internet</td>
+</tr>
+<tr>
+<td>Data Link</td>
+<td>Network Access</td>
+</tr>
+<tr>
+<td>Physical</td>
+<td>Network Access</td>
+</tr>
+</tbody>
+</table>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../../security-architecture-and-engineering/cryptography/" class="btn btn-neutral float-left" title="Cryptography"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../../security-architecture-and-engineering/cryptography/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
