@@ -9,6 +9,8 @@ nav:
           - Cryptography: core-knowledge-and-theory/security-architecture-and-engineering/cryptography.md
       - Communication and Network Security:
           - OSI and TCP/IP Models: core-knowledge-and-theory/communication-and-network-security/osi-and-tcp-ip-models.md
+      - Identity and Access Management (IAM):
+          - Access Control Models: core-knowledge-and-theory/identity-and-access-management-iam/access-control-models.md
 remote_branch: docs
 site_name: Harckives
 theme:

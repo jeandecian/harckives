@@ -52,4 +52,4 @@ The **DAD Triad** (Disclosure, Alteration, Destruction) represents the inverse o
 2. **DAD is Reactive/Predictive:** Helps anticipate what attackers will try to do
 3. **Complementary Models:** Use CIA to set goals, DAD to identify threats
 4. **Not Always Equal:** Different assets have different CIA priorities (e.g., public website: Availability > Confidentiality; trade secret: Confidentiality > Availability)
-5. **Foundation for Everything:** These concepts underpin all other security domains (access control (CIA), [cryptography](../security-architecture-and-engineering/cryptography.md) (C/I), BCP/DRP (A), etc.)
+5. **Foundation for Everything:** These concepts underpin all other security domains ([access control](../identity-and-access-management-iam/access-control-models.md) (CIA), [cryptography](../security-architecture-and-engineering/cryptography.md) (C/I), BCP/DRP (A), etc.)
