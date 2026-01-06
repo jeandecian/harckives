@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Access Control Models - Harckives</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Access Control Models";
+        var mkdocs_page_input_path = "core-knowledge-and-theory/identity-and-access-management-iam/access-control-models.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> Harckives
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">About</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Core Knowledge & Theory</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" >Security and Risk Management</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../security-and-risk-management/the-cia-triad-and-dad-triad/">The CIA Triad and DAD Triad</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Asset Security</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../asset-security/data-classification/">Data Classification</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Security Architecture and Engineering</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../security-architecture-and-engineering/cryptography/">Cryptography</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Communication and Network Security</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../communication-and-network-security/osi-and-tcp-ip-models/">OSI and TCP/IP Models</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >Identity and Access Management (IAM)</a>
+    <ul class="current">
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Access Control Models</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#discretionary-access-control-dac">Discretionary Access Control (DAC)</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#key-characteristics-of-dac">Key Characteristics of DAC</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#mandatory-access-control-mac">Mandatory Access Control (MAC)</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#key-characteristics-of-mac">Key Characteristics of MAC</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#role-based-access-control-rbac">Role-Based Access Control (RBAC)</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#key-characteristics-of-rbac">Key Characteristics of RBAC</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#attribute-based-access-control-abac">Attribute-Based Access Control (ABAC)</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#key-characteristics-of-abac">Key Characteristics of ABAC</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#rule-based-access-control-rubac">Rule-Based Access Control (RuBAC)</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#key-characteristics-of-rubac">Key Characteristics of RuBAC</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#choosing-the-right-model">Choosing the Right Model</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">Harckives</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Core Knowledge & Theory</li>
+          <li class="breadcrumb-item">Identity and Access Management (IAM)</li>
+      <li class="breadcrumb-item active">Access Control Models</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="access-control-models">Access Control Models</h1>
+<p>Access control is a <strong>core security principle</strong> that determines who or what can view, use, or modify resources in a system. It ensures that only authorized users and processes have the appropriate level of access. Below are the <strong>primary types of access control models</strong>, each with its own approach to managing permissions.</p>
+<h2 id="discretionary-access-control-dac">Discretionary Access Control (DAC)</h2>
+<ul>
+<li><strong>DAC</strong> allows the <strong>owner</strong> of a resource (e.g., file, folder) to decide who can access it and what permissions they have.</li>
+<li>Access is granted at the discretion of the owner.</li>
+</ul>
+<h3 id="key-characteristics-of-dac">Key Characteristics of DAC</h3>
+<ul>
+<li><strong>Flexible:</strong> Owners can freely grant or revoke access.</li>
+<li><strong>User-Centric:</strong> Users control access to their own resources.</li>
+<li><strong>Example:</strong> File permissions in Windows (e.g., sharing a folder with specific users).</li>
+</ul>
+<h2 id="mandatory-access-control-mac">Mandatory Access Control (MAC)</h2>
+<ul>
+<li><strong>MAC</strong> is a <strong>strict, policy-driven</strong> model where access is determined by a <strong>central authority</strong> (e.g., system administrator or security policy).</li>
+<li>Users and processes cannot change access permissions.</li>
+</ul>
+<h3 id="key-characteristics-of-mac">Key Characteristics of MAC</h3>
+<ul>
+<li><strong>Rule-Based:</strong> Access is granted based on predefined rules (e.g., security clearance levels).</li>
+<li><strong>Hierarchical:</strong> Uses labels (e.g., "Top Secret," "Confidential") to classify resources and users.</li>
+<li><strong>Example:</strong> Military or government systems (e.g., Bell-LaPadula model).</li>
+</ul>
+<h2 id="role-based-access-control-rbac">Role-Based Access Control (RBAC)</h2>
+<ul>
+<li><strong>RBAC</strong> grants access based on <strong>user roles</strong> (e.g., "Admin," "Editor," "Viewer").</li>
+<li>Permissions are assigned to roles, and users inherit permissions based on their role.</li>
+</ul>
+<h3 id="key-characteristics-of-rbac">Key Characteristics of RBAC</h3>
+<ul>
+<li><strong>Scalable:</strong> Simplifies permission management in large organizations.</li>
+<li><strong>Role Assignment:</strong> Users are assigned roles, not individual permissions.</li>
+<li><strong>Example:</strong> Enterprise systems (e.g., Active Directory, AWS IAM).</li>
+</ul>
+<h2 id="attribute-based-access-control-abac">Attribute-Based Access Control (ABAC)</h2>
+<ul>
+<li><strong>ABAC</strong> grants access based on <strong>attributes</strong> (e.g., user attributes, resource attributes, environmental conditions).</li>
+<li>Uses policies like "If (user.department = 'Finance' AND resource.type = 'Budget'), then grant access."</li>
+</ul>
+<h3 id="key-characteristics-of-abac">Key Characteristics of ABAC</h3>
+<ul>
+<li><strong>Dynamic:</strong> Access decisions are context-aware.</li>
+<li><strong>Fine-Grained:</strong> Allows for highly specific access rules.</li>
+<li><strong>Example:</strong> Modern cloud services (e.g., AWS IAM policies).</li>
+</ul>
+<h2 id="rule-based-access-control-rubac">Rule-Based Access Control (RuBAC)</h2>
+<ul>
+<li><strong>RuBAC</strong> grants access based on <strong>predefined rules</strong> (e.g., time of day, location).</li>
+<li>Similar to MAC but often used for specific scenarios (e.g., "Allow access only during business hours").</li>
+</ul>
+<h3 id="key-characteristics-of-rubac">Key Characteristics of RuBAC</h3>
+<ul>
+<li><strong>Conditional:</strong> Access is granted based on rules.</li>
+<li><strong>Example:</strong> Firewall rules, network access control lists (ACLs).</li>
+</ul>
+<h2 id="choosing-the-right-model">Choosing the Right Model</h2>
+<ul>
+<li><strong>For simplicity:</strong> Use DAC or RuBAC.</li>
+<li><strong>For scalability:</strong> Use RBAC.</li>
+<li><strong>For granularity:</strong> Use ABAC.</li>
+<li><strong>For high security:</strong> Use MAC.</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../../communication-and-network-security/osi-and-tcp-ip-models/" class="btn btn-neutral float-left" title="OSI and TCP/IP Models"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../../communication-and-network-security/osi-and-tcp-ip-models/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
