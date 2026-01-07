@@ -11,6 +11,8 @@ nav:
           - OSI and TCP/IP Models: core-knowledge-and-theory/communication-and-network-security/osi-and-tcp-ip-models.md
       - Identity and Access Management (IAM):
           - Access Control Models: core-knowledge-and-theory/identity-and-access-management-iam/access-control-models.md
+      - Security Assessment and Testing:
+          - Common Vulnerabilities and Exposures (CVE): core-knowledge-and-theory/security-assessment-and-testing/common-vulnerabilities-and-exposures-cve.md
 remote_branch: docs
 site_name: Harckives
 theme:
