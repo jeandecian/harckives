@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../../../img/favicon.ico" />
-    <title>Common Vulnerabilities and Exposures (CVE) - Harckives</title>
+    <title>Incident Response Lifecycle - Harckives</title>
     <link rel="stylesheet" href="../../../css/theme.css" />
     <link rel="stylesheet" href="../../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Common Vulnerabilities and Exposures (CVE)";
-        var mkdocs_page_input_path = "core-knowledge-and-theory/security-assessment-and-testing/common-vulnerabilities-and-exposures-cve.md";
+        var mkdocs_page_name = "Incident Response Lifecycle";
+        var mkdocs_page_input_path = "core-knowledge-and-theory/security-operations/incident-response-lifecycle.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -75,25 +75,33 @@
                 </li>
     </ul>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" >Security Assessment and Testing</a>
-    <ul class="current">
-                <li class="toctree-l2 current"><a class="reference internal current" href="#">Common Vulnerabilities and Exposures (CVE)</a>
-    <ul class="current">
-    <li class="toctree-l3"><a class="reference internal" href="#why-is-cve-important">Why is CVE Important?</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#how-cve-works">How CVE Works</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#cve-id-format">CVE ID Format</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#cve-vs-cvss">CVE vs. CVSS</a>
-    </li>
-    </ul>
+                  <li class="toctree-l1"><a class="reference internal" >Security Assessment and Testing</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../security-assessment-and-testing/common-vulnerabilities-and-exposures-cve/">Common Vulnerabilities and Exposures (CVE)</a>
                 </li>
     </ul>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" >Security Operations</a>
-    <ul>
-                <li class="toctree-l2"><a class="reference internal" href="../../security-operations/incident-response-lifecycle/">Incident Response Lifecycle</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" >Security Operations</a>
+    <ul class="current">
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Incident Response Lifecycle</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#lifecycle">Lifecycle</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#1-preparation">1. Preparation</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#2-identification-detection-and-analysis">2. Identification (Detection and Analysis)</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#3-containment">3. Containment</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#4-eradication">4. Eradication</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#5-recovery">5. Recovery</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#6-lessons-learned">6. Lessons Learned</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
                 </li>
     </ul>
                   </li>
@@ -113,8 +121,8 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
           <li class="breadcrumb-item">Core Knowledge & Theory</li>
-          <li class="breadcrumb-item">Security Assessment and Testing</li>
-      <li class="breadcrumb-item active">Common Vulnerabilities and Exposures (CVE)</li>
+          <li class="breadcrumb-item">Security Operations</li>
+      <li class="breadcrumb-item active">Incident Response Lifecycle</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -123,42 +131,26 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="common-vulnerabilities-and-exposures-cve">Common Vulnerabilities and Exposures (CVE)</h1>
-<p><strong>Common Vulnerabilities and Exposures (CVE)</strong> is a <strong>publicly available database</strong> that provides a <strong>standardized identifier</strong> for known cybersecurity vulnerabilities. Each vulnerability is assigned a unique <strong>CVE ID</strong> (e.g., CVE-2024-1234), making it easier for organizations to track, prioritize, and mitigate risks.</p>
-<p>CVE is maintained by the <strong>MITRE Corporation</strong> and is a critical resource for cybersecurity professionals, vendors, and organizations worldwide.</p>
-<h2 id="why-is-cve-important">Why is CVE Important?</h2>
-<ul>
-<li><strong>Standardization:</strong> Provides a universal naming convention for vulnerabilities, avoiding confusion.</li>
-<li><strong>Collaboration:</strong> Enables vendors, researchers, and organizations to share information about vulnerabilities.</li>
-<li><strong>Prioritization:</strong> Helps organizations identify and address critical vulnerabilities quickly.</li>
-<li><strong>Compliance:</strong> Supports regulatory requirements (e.g., patch management, risk assessments).</li>
-<li><strong>Awareness:</strong> Keeps the cybersecurity community informed about emerging threats.</li>
-</ul>
-<h2 id="how-cve-works">How CVE Works</h2>
-<ul>
-<li><strong>Discovery:</strong> A vulnerability is identified by researchers, vendors, or security teams.</li>
-<li><strong>Assignment:</strong> MITRE or a CVE Numbering Authority (CNA) assigns a unique CVE ID.</li>
-<li><strong>Publication:</strong> The CVE entry is published in the CVE database.</li>
-<li><strong>Mitigation:</strong> Organizations use CVE data to apply patches or implement workarounds.</li>
-</ul>
-<h2 id="cve-id-format">CVE ID Format</h2>
-<p>A CVE ID follows a standardized format: CVE-YYYY-NNNNN</p>
-<ul>
-<li><strong>CVE:</strong> Prefix for Common Vulnerabilities and Exposures.</li>
-<li><strong>YYYY:</strong> Year the vulnerability was assigned.</li>
-<li><strong>NNNNN:</strong> Unique sequential number.</li>
-</ul>
-<h2 id="cve-vs-cvss">CVE vs. CVSS</h2>
-<ul>
-<li><strong>CVE:</strong> Provides a unique identifier for a vulnerability.</li>
-<li><strong>CVSS (Common Vulnerability Scoring System):</strong> Assigns a severity score (0-10) to a CVE, based on factors like exploitability and impact.</li>
-</ul>
+                <h1 id="incident-response-lifecycle">Incident Response Lifecycle</h1>
+<p>An <strong>Incident Response Lifecycle</strong> provides a structured framework to prepare for, detect, respond to, and recover from security breaches.</p>
+<h2 id="lifecycle">Lifecycle</h2>
+<h3 id="1-preparation">1. <strong>Preparation</strong></h3>
+<p><strong>Objective:</strong> Build the foundation for an effective incident response.</p>
+<h3 id="2-identification-detection-and-analysis">2. <strong>Identification (Detection and Analysis)</strong></h3>
+<p><strong>Objective:</strong> Detect and analyze potential security incidents.</p>
+<h3 id="3-containment">3. <strong>Containment</strong></h3>
+<p><strong>Objective:</strong> Limit the impact of the incident.</p>
+<h3 id="4-eradication">4. <strong>Eradication</strong></h3>
+<p><strong>Objective:</strong> Remove the root cause of the incident.</p>
+<h3 id="5-recovery">5. <strong>Recovery</strong></h3>
+<p><strong>Objective:</strong> Restore affected systems and resume normal operations.</p>
+<h3 id="6-lessons-learned">6. <strong>Lessons Learned</strong></h3>
+<p><strong>Objective:</strong> Improve future incident response efforts.</p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../../identity-and-access-management-iam/access-control-models/" class="btn btn-neutral float-left" title="Access Control Models"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../../security-operations/incident-response-lifecycle/" class="btn btn-neutral float-right" title="Incident Response Lifecycle">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../../security-assessment-and-testing/common-vulnerabilities-and-exposures-cve/" class="btn btn-neutral float-left" title="Common Vulnerabilities and Exposures (CVE)"><span class="icon icon-circle-arrow-left"></span> Previous</a>
     </div>
 
   <hr/>
@@ -181,10 +173,8 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../../identity-and-access-management-iam/access-control-models/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../../security-assessment-and-testing/common-vulnerabilities-and-exposures-cve/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
-    
-      <span><a href="../../security-operations/incident-response-lifecycle/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
