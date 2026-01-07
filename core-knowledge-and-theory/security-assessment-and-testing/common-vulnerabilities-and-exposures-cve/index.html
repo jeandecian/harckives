@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../../../img/favicon.ico" />
-    <title>Cryptography - Harckives</title>
+    <title>Common Vulnerabilities and Exposures (CVE) - Harckives</title>
     <link rel="stylesheet" href="../../../css/theme.css" />
     <link rel="stylesheet" href="../../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Cryptography";
-        var mkdocs_page_input_path = "core-knowledge-and-theory/security-architecture-and-engineering/cryptography.md";
+        var mkdocs_page_name = "Common Vulnerabilities and Exposures (CVE)";
+        var mkdocs_page_input_path = "core-knowledge-and-theory/security-assessment-and-testing/common-vulnerabilities-and-exposures-cve.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -57,29 +57,9 @@
                 </li>
     </ul>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" >Security Architecture and Engineering</a>
-    <ul class="current">
-                <li class="toctree-l2 current"><a class="reference internal current" href="#">Cryptography</a>
-    <ul class="current">
-    <li class="toctree-l3"><a class="reference internal" href="#what-is-cryptography">What is Cryptography?</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#core-objectives-of-cryptography">Core Objectives of Cryptography</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#key-cryptographic-concepts">Key Cryptographic Concepts</a>
-        <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#plaintext-vs-ciphertext">Plaintext vs. Ciphertext</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#encryption-and-decryption">Encryption and Decryption</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#keys">Keys</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#hashing">Hashing</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#common-cryptographic-algorithms">Common Cryptographic Algorithms</a>
-    </li>
-    </ul>
+                  <li class="toctree-l1"><a class="reference internal" >Security Architecture and Engineering</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../security-architecture-and-engineering/cryptography/">Cryptography</a>
                 </li>
     </ul>
                   </li>
@@ -95,9 +75,19 @@
                 </li>
     </ul>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" >Security Assessment and Testing</a>
-    <ul>
-                <li class="toctree-l2"><a class="reference internal" href="../../security-assessment-and-testing/common-vulnerabilities-and-exposures-cve/">Common Vulnerabilities and Exposures (CVE)</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" >Security Assessment and Testing</a>
+    <ul class="current">
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Common Vulnerabilities and Exposures (CVE)</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#why-is-cve-important">Why is CVE Important?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#how-cve-works">How CVE Works</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#cve-id-format">CVE ID Format</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#cve-vs-cvss">CVE vs. CVSS</a>
+    </li>
+    </ul>
                 </li>
     </ul>
                   </li>
@@ -117,8 +107,8 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
           <li class="breadcrumb-item">Core Knowledge & Theory</li>
-          <li class="breadcrumb-item">Security Architecture and Engineering</li>
-      <li class="breadcrumb-item active">Cryptography</li>
+          <li class="breadcrumb-item">Security Assessment and Testing</li>
+      <li class="breadcrumb-item active">Common Vulnerabilities and Exposures (CVE)</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -127,69 +117,41 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="cryptography">Cryptography</h1>
-<h2 id="what-is-cryptography">What is Cryptography?</h2>
-<p>Cryptography is the science of securing information by transforming it into a format that is unreadable to unauthorized users. It ensures <strong>confidentiality, integrity, authentication, and non-repudiation</strong> of data, both at rest and in transit.</p>
-<h2 id="core-objectives-of-cryptography">Core Objectives of Cryptography</h2>
-<ol>
-<li><strong>Confidentiality:</strong> Ensures only authorized parties can access the information.</li>
-<li><strong>Integrity:</strong> Guarantees that data has not been altered or tampered with.</li>
-<li><strong>Authentication:</strong> Verifies the identity of users or systems.</li>
-<li><strong>Non-repudiation:</strong> Prevents individuals from denying their actions (e.g., sending a message or transaction).</li>
-</ol>
-<h2 id="key-cryptographic-concepts">Key Cryptographic Concepts</h2>
-<h3 id="plaintext-vs-ciphertext">Plaintext vs. Ciphertext</h3>
+                <h1 id="common-vulnerabilities-and-exposures-cve">Common Vulnerabilities and Exposures (CVE)</h1>
+<p><strong>Common Vulnerabilities and Exposures (CVE)</strong> is a <strong>publicly available database</strong> that provides a <strong>standardized identifier</strong> for known cybersecurity vulnerabilities. Each vulnerability is assigned a unique <strong>CVE ID</strong> (e.g., CVE-2024-1234), making it easier for organizations to track, prioritize, and mitigate risks.</p>
+<p>CVE is maintained by the <strong>MITRE Corporation</strong> and is a critical resource for cybersecurity professionals, vendors, and organizations worldwide.</p>
+<h2 id="why-is-cve-important">Why is CVE Important?</h2>
 <ul>
-<li><strong>Plaintext:</strong> Original, readable data.</li>
-<li><strong>Ciphertext:</strong> Encrypted data, unreadable without decryption.</li>
+<li><strong>Standardization:</strong> Provides a universal naming convention for vulnerabilities, avoiding confusion.</li>
+<li><strong>Collaboration:</strong> Enables vendors, researchers, and organizations to share information about vulnerabilities.</li>
+<li><strong>Prioritization:</strong> Helps organizations identify and address critical vulnerabilities quickly.</li>
+<li><strong>Compliance:</strong> Supports regulatory requirements (e.g., patch management, risk assessments).</li>
+<li><strong>Awareness:</strong> Keeps the cybersecurity community informed about emerging threats.</li>
 </ul>
-<h3 id="encryption-and-decryption">Encryption and Decryption</h3>
+<h2 id="how-cve-works">How CVE Works</h2>
 <ul>
-<li><strong>Encryption:</strong> Converts plaintext to ciphertext using an algorithm and a key.</li>
-<li><strong>Decryption:</strong> Converts ciphertext back to plaintext using the same or a different key.</li>
+<li><strong>Discovery:</strong> A vulnerability is identified by researchers, vendors, or security teams.</li>
+<li><strong>Assignment:</strong> MITRE or a CVE Numbering Authority (CNA) assigns a unique CVE ID.</li>
+<li><strong>Publication:</strong> The CVE entry is published in the CVE database.</li>
+<li><strong>Mitigation:</strong> Organizations use CVE data to apply patches or implement workarounds.</li>
 </ul>
-<h3 id="keys">Keys</h3>
+<h2 id="cve-id-format">CVE ID Format</h2>
+<p>A CVE ID follows a standardized format: CVE-YYYY-NNNNN</p>
 <ul>
-<li><strong>Symmetric Key:</strong> The same key is used for both encryption and decryption (e.g., AES, DES).</li>
-<li><strong>Asymmetric Key:</strong> Uses a public key for encryption and a private key for decryption (e.g., RSA, ECC).</li>
+<li><strong>CVE:</strong> Prefix for Common Vulnerabilities and Exposures.</li>
+<li><strong>YYYY:</strong> Year the vulnerability was assigned.</li>
+<li><strong>NNNNN:</strong> Unique sequential number.</li>
 </ul>
-<h3 id="hashing">Hashing</h3>
+<h2 id="cve-vs-cvss">CVE vs. CVSS</h2>
 <ul>
-<li>Converts data into a fixed-length string (hash value) for integrity checks (e.g., SHA-256, MD5).</li>
+<li><strong>CVE:</strong> Provides a unique identifier for a vulnerability.</li>
+<li><strong>CVSS (Common Vulnerability Scoring System):</strong> Assigns a severity score (0-10) to a CVE, based on factors like exploitability and impact.</li>
 </ul>
-<h2 id="common-cryptographic-algorithms">Common Cryptographic Algorithms</h2>
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Algorithm</th>
-<th>Use Case</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Symmetric Encryption</td>
-<td>AES, 3DES, Blowfish</td>
-<td>Encrypting data at rest or in transit</td>
-</tr>
-<tr>
-<td>Asymmetric Encryption</td>
-<td>RSA, ECC, Diffie-Hellman</td>
-<td>Secure key exchange, digital signatures</td>
-</tr>
-<tr>
-<td>Hashing</td>
-<td>SHA-256, SHA-3, MD5</td>
-<td>Data integrity, password storage</td>
-</tr>
-</tbody>
-</table>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../../asset-security/data-classification/" class="btn btn-neutral float-left" title="Data Classification"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../../communication-and-network-security/osi-and-tcp-ip-models/" class="btn btn-neutral float-right" title="OSI and TCP/IP Models">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../../identity-and-access-management-iam/access-control-models/" class="btn btn-neutral float-left" title="Access Control Models"><span class="icon icon-circle-arrow-left"></span> Previous</a>
     </div>
 
   <hr/>
@@ -212,10 +174,8 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../../asset-security/data-classification/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../../identity-and-access-management-iam/access-control-models/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
-    
-      <span><a href="../../communication-and-network-security/osi-and-tcp-ip-models/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
