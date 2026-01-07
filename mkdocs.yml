@@ -13,6 +13,8 @@ nav:
           - Access Control Models: core-knowledge-and-theory/identity-and-access-management-iam/access-control-models.md
       - Security Assessment and Testing:
           - Common Vulnerabilities and Exposures (CVE): core-knowledge-and-theory/security-assessment-and-testing/common-vulnerabilities-and-exposures-cve.md
+      - Security Operations:
+          - Incident Response Lifecycle: core-knowledge-and-theory/security-operations/incident-response-lifecycle.md
 remote_branch: docs
 site_name: Harckives
 theme:
