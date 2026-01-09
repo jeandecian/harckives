@@ -15,6 +15,8 @@ nav:
           - Common Vulnerabilities and Exposures (CVE): core-knowledge-and-theory/security-assessment-and-testing/common-vulnerabilities-and-exposures-cve.md
       - Security Operations:
           - Incident Response Lifecycle: core-knowledge-and-theory/security-operations/incident-response-lifecycle.md
+      - Software Development Security:
+          - OWASP Top 10: core-knowledge-and-theory/software-development-security/owasp-top-10.md
 remote_branch: docs
 site_name: Harckives
 theme:
