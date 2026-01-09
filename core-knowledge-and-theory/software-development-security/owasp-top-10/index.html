@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../../../img/favicon.ico" />
-    <title>Cryptography - Harckives</title>
+    <title>OWASP Top 10 - Harckives</title>
     <link rel="stylesheet" href="../../../css/theme.css" />
     <link rel="stylesheet" href="../../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Cryptography";
-        var mkdocs_page_input_path = "core-knowledge-and-theory/security-architecture-and-engineering/cryptography.md";
+        var mkdocs_page_name = "OWASP Top 10";
+        var mkdocs_page_input_path = "core-knowledge-and-theory/software-development-security/owasp-top-10.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -57,29 +57,9 @@
                 </li>
     </ul>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" >Security Architecture and Engineering</a>
-    <ul class="current">
-                <li class="toctree-l2 current"><a class="reference internal current" href="#">Cryptography</a>
-    <ul class="current">
-    <li class="toctree-l3"><a class="reference internal" href="#what-is-cryptography">What is Cryptography?</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#core-objectives-of-cryptography">Core Objectives of Cryptography</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#key-cryptographic-concepts">Key Cryptographic Concepts</a>
-        <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#plaintext-vs-ciphertext">Plaintext vs. Ciphertext</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#encryption-and-decryption">Encryption and Decryption</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#keys">Keys</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#hashing">Hashing</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#common-cryptographic-algorithms">Common Cryptographic Algorithms</a>
-    </li>
-    </ul>
+                  <li class="toctree-l1"><a class="reference internal" >Security Architecture and Engineering</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../security-architecture-and-engineering/cryptography/">Cryptography</a>
                 </li>
     </ul>
                   </li>
@@ -107,9 +87,13 @@
                 </li>
     </ul>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" >Software Development Security</a>
-    <ul>
-                <li class="toctree-l2"><a class="reference internal" href="../../software-development-security/owasp-top-10/">OWASP Top 10</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" >Software Development Security</a>
+    <ul class="current">
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">OWASP Top 10</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#2021-edition">2021 Edition</a>
+    </li>
+    </ul>
                 </li>
     </ul>
                   </li>
@@ -129,8 +113,8 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
           <li class="breadcrumb-item">Core Knowledge & Theory</li>
-          <li class="breadcrumb-item">Security Architecture and Engineering</li>
-      <li class="breadcrumb-item active">Cryptography</li>
+          <li class="breadcrumb-item">Software Development Security</li>
+      <li class="breadcrumb-item active">OWASP Top 10</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -139,60 +123,68 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="cryptography">Cryptography</h1>
-<h2 id="what-is-cryptography">What is Cryptography?</h2>
-<p>Cryptography is the science of securing information by transforming it into a format that is unreadable to unauthorized users. It ensures <strong>confidentiality, integrity, authentication, and non-repudiation</strong> of data, both at rest and in transit.</p>
-<h2 id="core-objectives-of-cryptography">Core Objectives of Cryptography</h2>
-<ol>
-<li><strong>Confidentiality:</strong> Ensures only authorized parties can access the information.</li>
-<li><strong>Integrity:</strong> Guarantees that data has not been altered or tampered with.</li>
-<li><strong>Authentication:</strong> Verifies the identity of users or systems.</li>
-<li><strong>Non-repudiation:</strong> Prevents individuals from denying their actions (e.g., sending a message or transaction).</li>
-</ol>
-<h2 id="key-cryptographic-concepts">Key Cryptographic Concepts</h2>
-<h3 id="plaintext-vs-ciphertext">Plaintext vs. Ciphertext</h3>
-<ul>
-<li><strong>Plaintext:</strong> Original, readable data.</li>
-<li><strong>Ciphertext:</strong> Encrypted data, unreadable without decryption.</li>
-</ul>
-<h3 id="encryption-and-decryption">Encryption and Decryption</h3>
-<ul>
-<li><strong>Encryption:</strong> Converts plaintext to ciphertext using an algorithm and a key.</li>
-<li><strong>Decryption:</strong> Converts ciphertext back to plaintext using the same or a different key.</li>
-</ul>
-<h3 id="keys">Keys</h3>
-<ul>
-<li><strong>Symmetric Key:</strong> The same key is used for both encryption and decryption (e.g., AES, DES).</li>
-<li><strong>Asymmetric Key:</strong> Uses a public key for encryption and a private key for decryption (e.g., RSA, ECC).</li>
-</ul>
-<h3 id="hashing">Hashing</h3>
-<ul>
-<li>Converts data into a fixed-length string (hash value) for integrity checks (e.g., SHA-256, MD5).</li>
-</ul>
-<h2 id="common-cryptographic-algorithms">Common Cryptographic Algorithms</h2>
+                <h1 id="owasp-top-10">OWASP Top 10</h1>
+<p>The <strong>OWASP Top 10</strong> is a globally recognized list of the <strong>most critical security risks</strong> in web applications. Published by the <strong>Open Web Application Security Project (OWASP)</strong>, it provides organizations with a prioritized list of vulnerabilities that developers, security teams, and businesses should address to improve application security.</p>
+<h2 id="2021-edition">2021 Edition</h2>
+<p>Here are the <strong>10 most critical web application security risks</strong> according to OWASP:</p>
 <table>
 <thead>
 <tr>
-<th>Type</th>
-<th>Algorithm</th>
-<th>Use Case</th>
+<th>Rank</th>
+<th>Risk</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Symmetric Encryption</td>
-<td>AES, 3DES, Blowfish</td>
-<td>Encrypting data at rest or in transit</td>
+<td>1</td>
+<td>Broken Access Control</td>
+<td>Unauthorized users gain access to restricted functions or data.</td>
 </tr>
 <tr>
-<td>Asymmetric Encryption</td>
-<td>RSA, ECC, Diffie-Hellman</td>
-<td>Secure key exchange, digital signatures</td>
+<td>2</td>
+<td>Cryptographic Failures</td>
+<td>Weak or improper use of encryption, exposing sensitive data.</td>
 </tr>
 <tr>
-<td>Hashing</td>
-<td>SHA-256, SHA-3, MD5</td>
-<td>Data integrity, password storage</td>
+<td>3</td>
+<td>Injection</td>
+<td>Malicious code is injected into an application (e.g., SQL, NoSQL, OS, LDAP injection).</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Insecure Design</td>
+<td>Flaws in application architecture or design that lead to security weaknesses.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Security Misconfiguration</td>
+<td>Default or improperly configured security settings.</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Vulnerable and Outdated Components</td>
+<td>Use of outdated libraries, frameworks, or dependencies with known vulnerabilities.</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Identification and Authentication Failures</td>
+<td>Weak authentication mechanisms (e.g., brute force attacks, session hijacking).</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Software and Data Integrity Failures</td>
+<td>Code or infrastructure tampering due to lack of integrity checks.</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Security Logging and Monitoring Failures</td>
+<td>Insufficient logging or monitoring, delaying incident detection.</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Server-Side Request Forgery (SSRF)</td>
+<td>Attackers force the server to make unauthorized requests to internal systems.</td>
 </tr>
 </tbody>
 </table>
@@ -200,8 +192,7 @@
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../../asset-security/data-classification/" class="btn btn-neutral float-left" title="Data Classification"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../../communication-and-network-security/osi-and-tcp-ip-models/" class="btn btn-neutral float-right" title="OSI and TCP/IP Models">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../../security-operations/incident-response-lifecycle/" class="btn btn-neutral float-left" title="Incident Response Lifecycle"><span class="icon icon-circle-arrow-left"></span> Previous</a>
     </div>
 
   <hr/>
@@ -224,10 +215,8 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../../asset-security/data-classification/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../../security-operations/incident-response-lifecycle/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
-    
-      <span><a href="../../communication-and-network-security/osi-and-tcp-ip-models/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
