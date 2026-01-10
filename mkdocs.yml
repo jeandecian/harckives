@@ -17,6 +17,11 @@ nav:
           - Incident Response Lifecycle: core-knowledge-and-theory/security-operations/incident-response-lifecycle.md
       - Software Development Security:
           - OWASP Top 10: core-knowledge-and-theory/software-development-security/owasp-top-10.md
+  - Practical Labs:
+      - OverTheWire:
+          - Krypton:
+              - Level 0: practical-labs/overthewire/krypton/level-0.md
+
 remote_branch: docs
 site_name: Harckives
 theme:
